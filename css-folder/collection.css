@@ -68,6 +68,12 @@ body {
     white-space: nowrap; /* Prevents text wrapping */
 }
 
+/* @media (max-width: 900) {
+  .navbar-nav {
+    width: 80%;
+  }
+} */
+
 /* SMALL SCREEN REFINEMENTS */
 @media (max-width: 768px) {
     #main-nav {
