@@ -63,6 +63,37 @@ window.addEventListener('resize', () => {
 
 
 
+// mouse navigation 
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("look-01");
+
+  if (!scrollBtn) return;
+
+  scrollBtn.addEventListener("click", () => {
+    const currentSection = scrollBtn.closest("section");
+    const nextSection = currentSection?.nextElementSibling;
+
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

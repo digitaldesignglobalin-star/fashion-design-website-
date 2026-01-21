@@ -69,16 +69,24 @@ window.addEventListener('resize', () => {
 
 
 // mouse scroll naimation 
-const scrollIndicator = document.querySelector('.scroll-indicator');
-const nextSection = document.querySelector('#collection-preview-section');
+// mouse navigation 
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollBtn = document.getElementById("preview-section");
 
-if (scrollIndicator && nextSection) {
-    scrollIndicator.addEventListener('click', () => {
-        nextSection.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-}
+  if (!scrollBtn) return;
+
+  scrollBtn.addEventListener("click", () => {
+    const currentSection = scrollBtn.closest("section");
+    const nextSection = currentSection?.nextElementSibling;
+
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
 
 
 
