@@ -59,3 +59,49 @@ window.addEventListener('resize', () => {
     trigger.style.pointerEvents = 'auto';
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer bottom navigation button 
+const backToTop = document.getElementById("backToTop");
+
+backToTop.addEventListener("click", () => {
+  backToTop.style.pointerEvents = "none";
+
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    setTimeout(() => {
+      backToTop.style.pointerEvents = "auto";
+    }, 1000);
+  }, 120);
+});
+
+
+
+
+
+

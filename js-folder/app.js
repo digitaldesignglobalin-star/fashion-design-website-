@@ -97,6 +97,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// footer bottom navigation button 
+const backToTop = document.getElementById("backToTop");
+
+backToTop.addEventListener("click", () => {
+  backToTop.style.pointerEvents = "none";
+
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    setTimeout(() => {
+      backToTop.style.pointerEvents = "auto";
+    }, 1000);
+  }, 120);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* collection preview section  */
 // Intersection Observer for the Preview Section
 const previewSection = document.querySelector('.preview-viewport');
